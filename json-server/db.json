@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
+      },
+      "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true,
+        "theme": "app_dark_theme"
+      }
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "roles": [
+        "USER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
+      },
+      "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true,
+        "theme": "app_dark_theme"
+      }
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
+      "avatar": "https://s1.1zoom.ru/big3/992/367659-alexfas01.jpg",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true
+      }
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
+      "avatar": "https://s1.1zoom.ru/big3/992/367659-alexfas01.jpg"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "photo": "https://example.com/note1.jpg",
+      "title": "Заметка 1",
+      "description": "Описание первой заметки",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "photo": "https://example.com/note2.jpg",
+      "title": "Заметка 2",
+      "description": "Описание второй заметки",
+      "categoryId": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Категория 1",
+      "color": "#ff0000"
+    },
+    {
+      "id": 2,
+      "name": "Категория 2",
+      "color": "#00ff00"
+    }
+  ]
+}
