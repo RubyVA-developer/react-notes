@@ -1,6 +1,6 @@
-import { INote } from '../../types'
+import { INote } from '@/types'
 
-const NoteBlock: React.FC<INote> = ({ tags, image, title, descr }) => {
+export const NoteBlock = ({ tags, image, title, descr }: INote) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <img className="w-full h-48 object-cover" src={image} alt={title} />
@@ -22,5 +22,3 @@ const NoteBlock: React.FC<INote> = ({ tags, image, title, descr }) => {
     </div>
   )
 }
-
-export default NoteBlock

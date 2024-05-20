@@ -1,5 +1,7 @@
-import NoteBlock from '../../components/note'
-import { INote } from '../../types'
+import { LoginModalForm } from '@/components/LoginModalForm'
+import { INote } from '@/types'
+import { useState } from 'react'
+import { NoteBlock } from '@/components/NoteBlock'
 
 const HomePage = () => {
   const blocks: INote[] = [
@@ -18,10 +20,29 @@ const HomePage = () => {
     }
   ]
 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true)
+  }
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false)
+  }
+
   return (
     <div className="block">
-      <header className="shadow p-4 ">
-        <div className="container mx-auto text-3xl">ReactNotes</div>
+      <header className="shadow p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="container mx-auto text-3xl">ReactNotes</div>
+          <button
+            onClick={openLoginModal}
+            className="bg-blue-500 hover:bg-blue-700 active:bg-blue-900 text-white font-bold py-2 px-4 rounded transition-colors"
+          >
+            Button
+          </button>
+          <LoginModalForm isOpen={isLoginModalOpen} onClose={closeLoginModal} />
+        </div>
       </header>
       <div
         className="container mx-auto py-6 text-lg
