@@ -11,6 +11,7 @@ export const NoteBlock = ({ tags, image, title, descr }: INote) => {
           <div className="flex flex-wrap mt-4">
             {tags.map((tag) => (
               <span
+                key={tag.text}
                 className={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${tag.colorClass}`}
               >
                 {tag.text}
