@@ -1,6 +1,8 @@
 import { FormEvent, useState } from 'react'
-import { Modal } from '@/UI/modal'
+import { MyModal } from '@/UI/modal'
 import { Link } from 'react-router-dom'
+import { auth } from '@/config/firebase.ts'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 interface Props {
   onClose: () => void
@@ -10,19 +12,15 @@ export const LoginModalForm = ({ isOpen, onClose }: Props) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const handleLogin = (e: FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Implement login logic here
-    console.log('Login with:', { email, password })
-    onClose()
+
+    await createUserWithEmailAndPassword(auth, email, password)
   }
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Login">
-      <form
-        onSubmit={handleLogin}
-        className="flex items-center justify-center bg-gray-100"
-      >
+    <MyModal isOpen={isOpen} onClose={onClose}>
+      <div className="flex items-center justify-center bg-gray-100">
         <div className="w-full p-8 space-y-6 bg-white rounded-md">
           <h2 className="text-2xl font-bold text-center text-gray-800">
             Login
@@ -66,7 +64,7 @@ export const LoginModalForm = ({ isOpen, onClose }: Props) => {
             </p>
           </form>
         </div>
-      </form>
-    </Modal>
+      </div>
+    </MyModal>
   )
 }

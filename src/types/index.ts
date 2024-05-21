@@ -1,4 +1,5 @@
 interface INote {
+  id: string
   title: string
   descr: string
   image: string

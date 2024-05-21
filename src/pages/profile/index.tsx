@@ -1,5 +1,1 @@
-const ProfilePage = () => {
-  return <div>Profile Page</div>
-}
-
-export default ProfilePage
+export { ProfilePage } from '@/pages/profile/ui/profile-page.tsx'

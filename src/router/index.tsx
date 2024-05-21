@@ -1,6 +1,6 @@
-import HomePage from '../pages/home'
-import ProfilePage from '../pages/profile'
 import { createBrowserRouter } from 'react-router-dom'
+import { HomePage } from '@/pages/home'
+import { ProfilePage } from '@/pages/profile'
 
 const router = createBrowserRouter([
   {
